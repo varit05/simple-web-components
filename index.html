@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Web Custom Element Form</title>
+  <style>
+    body {
+      font-family: "Avenir", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #2c3e50;
+      margin: 20px auto;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h4>Simple Web component</h4>
+  <real-digital-form id="form" action="https://httpbin.org/post" method="POST" onSubmit="handleSubmit">
+    <real-digital-textfield name="name" validation="[a-z]+" required>
+    </real-digital-textfield>
+    <real-digital-textfield name="phone" validation="[0-9]+" required>
+    </real-digital-textfield>
+    <real-digital-textfield name="subject"> </real-digital-textfield>
+    <real-digital-button> Send </real-digital-button>
+  </real-digital-form>
+
+  <script src="components/real-digital-form.js"></script>
+  <script src="components/real-digital-textfield.js"></script>
+  <script src="components/real-digital-button.js"></script>
+  <script src="scripts.js"></script>
+</body>
